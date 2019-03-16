@@ -16,6 +16,7 @@ Core::Core(QObject* parent) : QObject(parent) {
 void Core::calculateRequest(QVariant x0, QVariant y0, QVariant z0,
 							QVariant x1, QVariant y1, QVariant z1,
 							QVariant algType) {
+
 	path_3d_t path;
 	path.path_type = static_cast<path_type_t>(algType.toInt());
 	path.start_point.x = x0.toInt();
@@ -103,7 +104,7 @@ void Core::pathCalculatePoint(const path_3d_t* info, uint32_t current_iteration,
 bool Core::kinematic_calculate_angles(point_3d_t& position) {
 
 	int32_t coxa_zero_rotate_deg = 45;
-	int32_t femur_zero_rotate_deg = 107;
+	int32_t femur_zero_rotate_deg = 101;
 	int32_t tibia_zero_rotate_deg = 47;
 	uint32_t coxa_length = 40;
 	uint32_t femur_length = 84;
